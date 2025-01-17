@@ -1,5 +1,3 @@
-// render.js
-
 // Limpa o canvas antes de desenhar o próximo quadro
 export function limparCanvas(context, width, height) {
     context.clearRect(0, 0, width, height);

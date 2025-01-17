@@ -1,0 +1,14 @@
+- Index
+- README.md
+- styles/
+    - game.css
+    - main.css
+    - themes.css
+- scripts/
+    - game.js
+    - main.js
+    - food.js
+    - snake.js
+    - input.js
+    - render.js
+    - utils.js

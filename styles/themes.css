@@ -1,0 +1,43 @@
+/* themes.css */
+
+/* Tema escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+canvas.dark-mode {
+    background-color: #2f2f2f;
+    border: 2px solid #fff;
+}
+
+/* Tema claro */
+body.light-mode {
+    background-color: #ffffff;
+    color: #333;
+}
+
+canvas.light-mode {
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+}
+
+/* Estilos adicionais para botões e outros elementos em ambos os temas */
+button.dark-mode, button.light-mode {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+button.dark-mode:hover, button.light-mode:hover {
+    background-color: #45a049;
+}
+
+button.dark-mode:focus, button.light-mode:focus {
+    outline: none;
+}

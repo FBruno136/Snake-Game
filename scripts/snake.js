@@ -17,7 +17,6 @@ const snakeState = {
     }
 };
 
-
 export function mudarDirecao(novaDirecao) {
     const { x: dx, y: dy } = snakeState.direction;
     if ((novaDirecao.x === -dx && novaDirecao.y === -dy) || (novaDirecao.x === 0 && novaDirecao.y === 0)) {

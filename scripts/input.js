@@ -1,8 +1,6 @@
-// input.js
-
 // Estado inicial da entrada
-let direcaoAtual = { x: 1, y: 0 }; // Direção inicial (direita)
-let direcaoProxima = { x: 1, y: 0 }; // Direção para o próximo movimento
+let direcaoAtual = { x: 1, y: 0 }; 
+let direcaoProxima = { x: 1, y: 0 }; 
 
 // Atualiza a direção com base na entrada do usuário
 export function configurarEntrada() {
@@ -11,7 +9,15 @@ export function configurarEntrada() {
             ArrowUp: { x: 0, y: -1 },
             ArrowDown: { x: 0, y: 1 },
             ArrowLeft: { x: -1, y: 0 },
-            ArrowRight: { x: 1, y: 0 }
+            ArrowRight: { x: 1, y: 0 },
+            w: { x: 0, y: -1 },
+            s: { x: 0, y: 1 },
+            a: { x: -1, y: 0 },
+            d: { x: 1, y: 0 },
+            W: { x: 0, y: -1 },
+            S: { x: 0, y: 1 },
+            A: { x: -1, y: 0 },
+            D: { x: 1, y: 0 },
         };
 
         if (direcoes[event.key]) {

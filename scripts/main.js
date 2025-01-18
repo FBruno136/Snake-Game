@@ -8,6 +8,19 @@ const context = canvas.getContext('2d');
 const CELL_SIZE = 20;
 const FPS = 10;
 let gameLoop;
+let jogoIniciado = false;
+
+document.getElementById('startGameButton').addEventListener('click', () => {
+    if (!jogoIniciado) {
+        jogoIniciado = true;
+
+        // Torna visível o contêiner do jogo e oculta o botão de início
+        document.getElementById('gameContainer').style.display = 'block';
+        document.getElementById('startGameButton').style.display = 'none';
+
+        inicializarJogo(); 
+    }
+});
 
 configurarEntrada(); 
 
@@ -18,7 +31,7 @@ function inicializarJogo() {
 }
 
 function iniciarLoop() {
-    gameLoop = setInterval(atualizarJogo, 1000 / FPS);
+    gameLoop = setInterval(atualizarJogo, 1000 / FPS); 
 }
 
 
@@ -59,5 +72,3 @@ function desenharJogo() {
     scoreDiv.textContent = `Pontuação: ${gameState.score}`;
     levelDiv.textContent = `Nível: ${gameState.level}`;
 }
-
-window.onload = inicializarJogo;

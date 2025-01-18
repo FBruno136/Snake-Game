@@ -10,15 +10,17 @@
 </head>
 <body>
     <h1>Jogo da Cobrinha</h1>
-    <p>Use as setas do teclado para jogar!</p>
+    <p>Use as setas do teclado ou as letras "w", "a", "s" e "d" para jogar!</p>
     <p>Pressione o botão "Iniciar Jogo" para começar.</p>
     <button id="startGameButton">Iniciar Jogo</button>
     
     <script type="module" src="scripts/main.js"></script>
     
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div id="gameContainer" style="display: none;">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+    </div>
     <div id="score">Pontuação:</div>
-    <div id="level">Nível: 1</div>
+    <div id="level">Nível:</div>
     
 </body>
 </html>

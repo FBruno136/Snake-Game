@@ -42,7 +42,7 @@ function atualizarJogo() {
     const snake = getSnakeState(); 
     if (snake.comerComida(getFoodPosition())) {
         gerarNovaComida(snake.body); 
-        atualizarPontuacao(10);
+        atualizarPontuacao(1);
     }
 
     desenharJogo();

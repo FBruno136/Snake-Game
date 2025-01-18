@@ -4,18 +4,27 @@ const gameState = {
     score: 0,
     level: 1,
     foodEaten: 0,
-    speed: 200,
+    speed: 100,
     isGameOver: false
 };
 
 export function atualizarPontuacao(pontos) {
-    gameState.score += pontos;
-    gameState.foodEaten++;
-    if (gameState.foodEaten % 25 === 0) {
-        gameState.level++;
-        gameState.speed = Math.max(50, gameState.speed - 25); 
-    }
+  gameState.score += pontos;
+  gameState.foodEaten++;
+
+  // Checar se atingiu o limite para o próximo nível
+  const comidaPorNivel = 20; 
+  if (gameState.foodEaten >= gameState.level * comidaPorNivel) {
+      gameState.level++;
+      gameState.speed = Math.max(50, gameState.speed - 20); 
+
+      // Resetar o tamanho da cobra ao tamanho inicial
+      const snakeState = getSnakeState();
+      snakeState.body = [{ x: 10, y: 10 }]; 
+      snakeState.grow = 0; 
+  }
 }
+
 
 export function finalizarJogo() {
   gameState.isGameOver = true;
